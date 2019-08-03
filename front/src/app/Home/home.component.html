@@ -1,0 +1,21 @@
+<div class="container" fxLayout="column" fxLayout.xs="column" fullscreen >
+	<div fxLayout="column" class="center_div" *ngIf="!found">
+
+		<div id="header" style="padding:5%; text-align: center;">
+			  <img id="smoke1" width="50" src="../../assets/images/smoke.svg">
+  <img width="100" src="../../assets/images/magic-ball.svg">
+    <img id="smoke2" width="50" src="../../assets/images/smoke.svg">
+
+</div>
+<div id="form" *ngIf="currentPossibilities && currentPossibilities1 && currentPossibilities2">
+<app-prediction-form [datas]=currentPossibilities [datas1]=currentPossibilities1 [datas2]=currentPossibilities2 (messageEvent)="submitted($event)"></app-prediction-form>
+</div>
+</div>
+ <img id="bar" width="1200" height="20" src="../../../assets/images/bar.svg">
+
+    <div id="result" *ngIf="found">
+    	<app-result [result]=found></app-result>
+    </div>
+</div>
+
+

@@ -1,0 +1,39 @@
+
+.date{
+	display: inline;
+	padding:15px;
+}
+
+#timeline{
+	display: inline-block;
+	position:relative; 
+	margin-top:10px;
+	z-index:1;
+}
+.example-card {
+	max-width: 300px;
+	min-width: 150px;
+	min-height:120px;
+}
+
+.icon {
+	width: 40px;
+	background-color:white;
+}
+
+table{
+	border-collapse: separate;
+	border-spacing:  5em 1.5em;
+}
+
+.center_div {
+     margin : 0 auto;
+     margin-bottom:50px;
+}
+
+button{
+	position:absolute;
+	bottom:15px;
+	left:10px;
+}
+

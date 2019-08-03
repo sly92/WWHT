@@ -1,0 +1,17 @@
+mat-toolbar mat-list mat-list-item {
+  color:inherit;
+  position: fixed;
+  bottom: 0;
+
+}
+
+mat-list-item {
+  font-family: Tahoma, Geneva, sans-serif;
+  font-weight: 550;
+  font-style: italic;
+}
+
+a {
+	text-decoration:none;
+	color: white;
+}

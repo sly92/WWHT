@@ -1,0 +1,83 @@
+
+<div class="container">
+  <div fxLayout="column" class="center_div">
+
+    <span id="timeline">
+     
+     <table>
+      <tr>
+        <ng-container *ngIf="!noHistory; else noHistoric">
+          <td *ngFor="let item of res.history">
+            <mat-card  class="date">{{item.date_name}}</mat-card>
+            </td>
+          </ng-container>
+            <ng-template #noHistoric><td class="date"></td></ng-template>
+
+         <ng-container *ngIf="!noPrediction; else noPredict">
+        <td *ngFor="let item of res.predicted.prediction">
+            <mat-card class="date">{{item.date_name}}</mat-card>
+            </td>
+            <ng-template #noPredict><td class="date"></td></ng-template>
+          </ng-container>
+        </tr>
+     <!--    <ng-template #noHistory>
+          <tr>
+              <td></td>
+
+        <td *ngFor="let item of res.predicted.prediction">
+            <mat-card class="date">{{item.date_name}}</mat-card>
+          </td>
+        </tr>
+            </ng-template> -->
+        <tr></tr>
+        
+        <tr>
+          <td *ngFor="let item of res.history"><img class="icon" src="../../../assets/images/info-button.png"></td>
+          <td *ngFor="let item of res.predicted.prediction"><img class="icon" src="../../../assets/images/help-round-button.png"></td>
+        </tr>
+        <ng-template #noHistoryDate2>
+         <td><img class="icon" src="../../../assets/images/info-button.png"></td>
+          <td><img class="icon" src="../../../assets/images/help-round-button.png"></td>
+        </ng-template>
+        <tr id="content-timeline">
+          <td *ngFor="let item of res.history">
+           <mat-card class="example-card"> 
+            <mat-card-header>
+             <mat-card-subtitle>{{res.formData.actor1}}</mat-card-subtitle>
+             <mat-card-subtitle>to {{res.formData.actor2}}</mat-card-subtitle>
+           </mat-card-header>
+           <mat-card-content style="margin-top:15px">
+            <p *ngIf="!noHistory; else noHistoryInfo">
+              The {{item.date_name}}, {{res.formData.actor1}} did {{item.Action | lowercase}} to {{res.formData.actor2}}
+            </p>
+            <ng-template #noHistoryInfo>
+              No historic event found in {{dateName}} between {{res.formData.actor1}} and {{res.formData.actor2}} 
+            </ng-template>
+          </mat-card-content>
+        </mat-card>
+      </td>
+      <td *ngFor="let item of res.predicted.prediction">
+ <mat-card class="example-card">
+  <mat-card-header>
+    <mat-card-subtitle> {{res.formData.actor1}}</mat-card-subtitle>
+    <mat-card-subtitle>to  {{res.formData.actor2}}</mat-card-subtitle>
+  </mat-card-header>
+  <mat-card-content style="margin-top:15px">
+    <p *ngIf="!noPrediction; else noPredictionInfo">
+      The {{item.date_name}}, {{res.formData.actor1}} will probably {{item.action | lowercase }} to {{res.formData.actor2}} 
+    </p>
+    <ng-template #noPredictionInfo>
+      No Prediction event found in {{dateName}} between {{res.formData.actor1}} and {{res.formData.actor2}}
+    </ng-template>
+  </mat-card-content>
+</mat-card>
+</td>
+</tr>
+
+</table>
+</span>
+</div>
+<button mat-raised-button (click)="back()">Back</button>
+
+</div>
+

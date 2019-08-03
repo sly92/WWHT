@@ -1,0 +1,110 @@
+
+<div class="container">
+  <div fxLayout="column" class="center_div">
+
+    <span id="timeline">
+
+     <table>
+        <tr *ngIf="dates; else noHistoryDate">
+          <td><mat-card class="date">{{dates[0]}}</mat-card></td>
+          <td><mat-card class="date">{{dates[1]}}</mat-card></td>
+          <td><mat-card class="date">{{dates[2]}}</mat-card></td>
+          <td><mat-card class="date">{{dates[3]}}</mat-card></td>
+          <td><mat-card class="date">{{date}}</mat-card></td>
+        </tr>
+         <ng-template #noHistoryDate>
+          <td></td>
+          <td><mat-card class="date">{{date}}</mat-card></td>
+        </ng-template>
+        <tr></tr>
+      <tr *ngIf="dates; else noHistoryDate2">
+        <td><img class="icon" src="../../../assets/images/info-button.png"></td>
+          <td><img class="icon" src="../../../assets/images/info-button.png"></td>
+          <td><img class="icon" src="../../../assets/images/info-button.png"></td>
+          <td><img class="icon" src="../../../assets/images/info-button.png"></td>
+        <td><img class="icon" src="../../../assets/images/help-round-button.png"></td>
+        </tr>
+        <ng-template #noHistoryDate2>
+         <td><img class="icon" src="../../../assets/images/info-button.png"></td>
+          <td><img class="icon" src="../../../assets/images/help-round-button.png"></td>
+        </ng-template>
+      <tr></tr>
+      <tr id="content-timeline">
+        <td *ngFor="let item of result.history">
+       <mat-card class="card-result">
+        <mat-card-header>
+         <mat-card-subtitle>{{result.formData.actor1}}</mat-card-subtitle>
+         <mat-card-subtitle>to {{result.formData.actor2}}</mat-card-subtitle>
+       </mat-card-header>
+       <mat-card-content>
+        <p *ngIf="item.EventCode; else noHistory">
+          At {{item.date}}, {{result.formData.actor1}} did {{item.EventCode}} to {{result.formData.actor2}} 
+        </p>
+      <ng-template #noHistory>
+        No historic event found between {{result.formData.actor1}} and {{result.formData.actor2}} 
+      </ng-template>
+      </mat-card-content>
+    </mat-card>
+  </td>
+    <!-- <td *ngIf="result.history.EventCode">
+     <mat-card class="card-result">
+      <mat-card-header>
+        <mat-card-subtitle>{{result.formData.actor1}}</mat-card-subtitle>
+        <mat-card-subtitle>to {{result.formData.actor2}}</mat-card-subtitle>
+      </mat-card-header>
+      <mat-card-content>
+        <p>
+         At {{dates[1]}}, {{result.formData.actor1}} did {{result.history.EventCode}} to {{result.formData.actor2}}  
+       </p>
+     </mat-card-content>
+   </mat-card>
+ </td>
+<td *ngIf="result.history.EventCode">
+   <mat-card class="card-result">
+    <mat-card-header>
+     <mat-card-subtitle>{{result.formData.actor1}}</mat-card-subtitle>
+     <mat-card-subtitle>to {{result.formData.actor2}}</mat-card-subtitle>
+   </mat-card-header>
+   <mat-card-content>
+    <p>
+      At {{dates[2]}}, {{result.formData.actor1}} did {{result.history.EventCode}} to {{result.formData.actor2}} 
+    </p>
+  </mat-card-content>
+</mat-card>
+</td>
+<td *ngIf="result.history.EventCode">
+ <mat-card class="card-result">
+  <mat-card-header>
+    <mat-card-subtitle>{{result.formData.actor1}}</mat-card-subtitle>
+    <mat-card-subtitle>to {{result.formData.actor2}}</mat-card-subtitle>
+  </mat-card-header>
+  <mat-card-content>
+    <p>
+      At {{dates[3]}}, {{result.formData.actor1}} did {{result.history.EventCode}} to {{result.formData.actor2}} 
+    </p>
+  </mat-card-content>
+</mat-card>
+</td> -->
+<td>
+ <mat-card class="card-result">
+  <mat-card-header>
+    <mat-card-subtitle>{{result.formData.actor1}}</mat-card-subtitle>
+    <mat-card-subtitle>to {{result.formData.actor2}}</mat-card-subtitle>
+  </mat-card-header>
+  <mat-card-content>
+    <p *ngIf="result.predicted; else noPredict">
+      At {{datPrediction}}, {{result.formData.actor1}} will probably {{result.predicted.event}} to {{result.formData.actor2}} 
+    </p>
+    <ng-template #noPredict>
+    No Prediction event found in {{datePrediction}} between {{result.formData.actor1}} and {{result.formData.actor2}} 
+  </ng-template>
+  </mat-card-content>
+</mat-card>
+</td></tr>
+
+</table>
+</span>
+</div>
+<button mat-raised-button (click)="back()" style="position:absolute;bottom:20px">Back</button>
+
+</div>

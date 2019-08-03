@@ -1,0 +1,91 @@
+
+:host(app-search-bar) {
+  /deep/ .mat-input-placeholder {
+    font-weight: 200;
+  }
+
+  /deep/ .mat-input-underline {
+    background-color: #DDD;
+}
+  /deep/ .mat-input-infix {
+    border-top: 1.5em solid transparent;
+  }
+}
+
+#bar {
+    display: inline;
+     position:absolute; 
+  top:30%;
+  left:2%;
+  width:300%;
+}
+
+div .form {
+  margin-top:10px;
+  min-width: 150px;
+  max-width: 500px;
+  width: 100%;
+  color:black;
+  font-size:200%;
+}
+
+.form-full-width {
+  width: 100%;
+  height: 50px;
+}
+
+.center_div {
+     margin : 0 auto;
+}
+
+$color: #db6d6d;
+
+
+.search_headers{
+  font-style: italic;
+  font-weight: 450;
+}
+
+div #content {
+  text-align:center;
+}
+
+#smoke1 {
+  position:absolute; 
+  left:20%; 
+  top:23%;
+}
+
+#smoke2 {
+  position:absolute; 
+  right:20%; 
+  top:23%;
+}
+
+// ------------------------------------------------------
+
+
+$icon-small-container-size: 32px;
+$icon-small-size: 12px;
+
+.mat-icon-button.small {
+  width: $icon-small-container-size;
+  height: $icon-small-container-size;
+  line-height: $icon-small-container-size;
+
+  .mat-icon, .mat-icon-button i {
+    line-height: $icon-small-size;
+  }
+
+  .mat-icon {
+    width: $icon-small-size;
+    height: $icon-small-size;
+  }
+
+  .material-icons {
+    font-size: $icon-small-size;
+  }
+}
+
+.pheader{color: rgba(0,0,0,.54);
+         font-size:12px;}

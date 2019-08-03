@@ -1,0 +1,10 @@
+@import '~@angular/material/theming';
+@include mat-core();
+
+$portal-primary: mat-palette($mat-teal, 800);
+$portal-accent: mat-palette($mat-teal, 100);
+$portal-warn: mat-palette($mat-red, 400);
+
+$portal-theme: mat-light-theme($portal-primary, $portal-accent, $portal-warn);
+
+@include angular-material-theme($portal-theme);

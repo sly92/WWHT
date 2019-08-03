@@ -1,0 +1,55 @@
+ TODO:
+
+ UX
+ ☐ Optimiser le temps d'affichage
+ ☐ Animation resultat
+
+En cours:
+
+Design
+ ☐ Création dynamique des élements
+ ☐ Sous titres pour les catégories d'acteur
+
+Traitement
+ ☐ Traiter plus de prediction
+
+Déploiement
+  ☐ Serveur frontend 
+  ☐ Serveur Backend
+
+Done:
+
+Design
+ ✔ Utilisation d'angular material @done (18-07-17 01:35)
+ ✔ Mise en place des routes @done (18-07-17 01:40)
+ ✔ Design de la page principale @done (18-07-17 01:39)
+ ✔ Simulation avec des jeux de données fictif @done (18-07-17 01:42)
+ ✔ Traitement des données de prédiction @done (18-07-17 01:40)
+ ✔ Timeline horizontal @done (18-07-17 01:16)
+     ✔ Event passed @done (18-07-17 01:16)
+     ✔ Event(s) predicted @done (18-07-17 01:16)
+
+  ✔ Affichage dynamique du résultat @done (18-07-17 01:24)
+  ✔ Traitement en cas de non résultat @done (18-07-17 01:25)
+
+Component
+
+✔ Squelette de l'application @done (18-07-17 01:33)
+✔ Formulaire @done (18-07-17 01:37)
+✔ Liste déroulante de tous les acteurs traités @done (18-07-17 01:31)
+✔ Autocomplétion des champs acteurs @done (18-07-17 01:37)
+Création du model Mongodb
+  ✔ Création des fonctions utiles pour intéragir avec la base @done (18-07-17 01:43)
+  ✔ Creation des fonctions utiles pour traiter les données de prédiction @done (18-07-17 01:43)
+
+Backend
+ ✔ Mise à disposition des API @done (18-07-17 01:30)
+
+Optimisation
+  ✔ importation de modules @done (18-07-17 01:34)
+
+Aborted:
+
+ ☐ Enrichissement dynamique de tous les acteurs en fonction du referentiel en base
+     => Soucis de perf
+     => Difficulté à manier certaines promises
