@@ -1,0 +1,16 @@
+[{
+	"configurations": [{
+		"classification": "export",
+		"properties": {
+			"PYSPARK_PYTHON": "/usr/bin/python3"
+		}
+	}],
+	"classification": "spark-env",
+	"properties": {}
+}, {
+	"classification": "spark-defaults",
+	"properties": {
+		"spark.executor.memory": "6g",
+		"spark.driver.memory": "4g"
+	}
+}]

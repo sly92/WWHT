@@ -1,0 +1,7 @@
+pyarrow
+pandas
+keras
+np_utils
+flask
+tensorflow-gpu
+pyspark
